@@ -1,0 +1,8 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# Notes
+assets/video/COLOQUE-O-VIDEO-AQUI.txt

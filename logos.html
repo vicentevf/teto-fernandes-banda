@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Teto Fernandes — Logo Lab v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@600;700;800&family=Montserrat:wght@700;800;900&family=Nunito:wght@800;900;1000&family=Sora:wght@700;800&family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{ --bg:#0d0d0d; --bg-2:#161616; --line:rgba(255,255,255,.12); --text:#f5f5f5; --muted:#9a9a9a; --accent:#f2c14e; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;padding:48px 20px 96px;line-height:1.5}
+  .head{max-width:1000px;margin:0 auto 40px;text-align:center}
+  .head h1{font-family:'Oswald';text-transform:uppercase;letter-spacing:.04em;font-size:1.8rem}
+  .head p{color:var(--muted);margin-top:8px;font-size:.95rem}
+  .grid{max-width:1000px;margin:0 auto;display:grid;gap:22px}
+  .card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:18px 22px 24px}
+  .card .tag{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px;gap:16px}
+  .card .name{font-family:'Oswald';text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;color:var(--accent);white-space:nowrap}
+  .card .desc{color:var(--muted);font-size:.82rem;text-align:right}
+  .stage{min-height:200px;display:flex;align-items:center;justify-content:center;padding:30px;
+         background:radial-gradient(130% 130% at 50% 0,#1e1e1e,#0d0d0d);border-radius:12px}
+
+  /* A — muse. minimal */
+  .vA{text-align:center}
+  .vA .word{font-family:'Baloo 2';font-weight:800;font-size:104px;line-height:.85;letter-spacing:-3px}
+  .vA .word .dot{color:var(--accent)}
+  .vA .meta{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:14px;
+            font-family:'Oswald';text-transform:uppercase;letter-spacing:.26em;font-size:.66rem;color:var(--muted)}
+  .vA .meta b{color:var(--text);font-weight:600}
+  .vA .meta i{width:5px;height:5px;border-radius:50%;background:var(--accent);display:inline-block}
+
+  /* B — origin clean one-liner */
+  .vB{text-align:center}
+  .vB .word{font-family:'Poppins';font-weight:700;font-size:60px;letter-spacing:-1.5px}
+  .vB .word .dot{color:var(--accent)}
+  .vB .sub{font-family:'Oswald';text-transform:uppercase;letter-spacing:.34em;font-size:.62rem;color:var(--muted);margin-top:8px}
+
+  /* C — equalizer (clean, music-forward) */
+  .vC{text-align:center}
+  .vC .word{font-family:'Montserrat';font-weight:800;font-size:64px;letter-spacing:1px;line-height:1}
+  .vC .eq{display:flex;align-items:flex-end;justify-content:center;gap:6px;height:54px;margin:0 0 14px}
+  .vC .eq span{width:8px;border-radius:4px;background:var(--accent)}
+  .vC .eq span:nth-child(1){height:40%}
+  .vC .eq span:nth-child(2){height:78%}
+  .vC .eq span:nth-child(3){height:100%}
+  .vC .eq span:nth-child(4){height:55%}
+  .vC .eq span:nth-child(5){height:88%}
+  .vC .eq span:nth-child(6){height:32%}
+  .vC .small{font-weight:300}
+
+  /* D — soundwave through caps (VIRA) */
+  .vD{text-align:center}
+  .vD .row{position:relative;display:inline-block;padding:6px 0}
+  .vD .word{font-family:'Montserrat';font-weight:900;font-size:90px;letter-spacing:3px;line-height:1}
+  .vD .wave{position:absolute;left:-4%;top:52%;width:108%;height:50px;transform:translateY(-50%);pointer-events:none}
+  .vD .sub{font-family:'Oswald';text-transform:uppercase;letter-spacing:.46em;font-size:.82rem;color:var(--muted);margin-top:10px;padding-left:.46em}
+
+  /* E — fluid underline swash (fuse) */
+  .vE{text-align:center}
+  .vE .word{font-family:'Nunito';font-weight:900;font-size:96px;letter-spacing:-4px}
+  .vE .swash{display:block;margin:-6px auto 0;width:340px;height:34px}
+  .vE .sub{font-family:'Oswald';text-transform:uppercase;letter-spacing:.38em;font-size:.66rem;color:var(--muted);margin-top:8px}
+
+  /* F — mark + wordmark lockup (play / pick) */
+  .vF{display:flex;align-items:center;gap:22px}
+  .vF .mark{width:74px;height:74px;border-radius:20px;background:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
+  .vF .mark svg{width:30px;height:30px;margin-left:4px}
+  .vF .txt{font-family:'Sora';font-weight:800;font-size:46px;line-height:.95;letter-spacing:-1px}
+  .vF .txt small{display:block;font-family:'Oswald';font-weight:500;text-transform:uppercase;letter-spacing:.3em;font-size:.6rem;color:var(--muted);margin-top:6px}
+
+  @media(max-width:560px){
+    .vA .word{font-size:66px}.vB .word{font-size:40px}.vC .word{font-size:42px}
+    .vD .word{font-size:54px}.vE .word{font-size:62px}.vF .txt{font-size:32px}
+  }
+</style>
+</head>
+<body>
+  <div class="head">
+    <h1>Logo Lab v2 — Teto Fernandes</h1>
+    <p>Versões refinadas (flourishes redesenhados). Me diz a letra que você curtiu — ou misture ideias — que eu finalizo e coloco no site.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- A -->
+    <div class="card">
+      <div class="tag"><span class="name">A — Minimal</span><span class="desc">muse. · rounded pesado + tagline central</span></div>
+      <div class="stage">
+        <div class="vA">
+          <div class="word">teto<span class="dot">.</span></div>
+          <div class="meta"><b>FERNANDES</b><i></i><span>POP AO VIVO</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- B -->
+    <div class="card">
+      <div class="tag"><span class="name">B — Clean</span><span class="desc">origin · lowercase em uma linha</span></div>
+      <div class="stage">
+        <div class="vB">
+          <div class="word">teto fernandes<span class="dot">.</span></div>
+          <div class="sub">banda · pop ao vivo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- C -->
+    <div class="card">
+      <div class="tag"><span class="name">C — Equalizer</span><span class="desc">música em primeiro plano (animável)</span></div>
+      <div class="stage">
+        <div class="vC">
+          <div class="eq"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="word">TETO <span class="small">fernandes</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- D -->
+    <div class="card">
+      <div class="tag"><span class="name">D — Soundwave</span><span class="desc">VIRA · onda sonora suave cruzando</span></div>
+      <div class="stage">
+        <div class="vD">
+          <div class="row">
+            <div class="word">TETO</div>
+            <svg class="wave" viewBox="0 0 240 40" preserveAspectRatio="none" fill="none" stroke="#f2c14e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M0 20 C 18 20 22 4 30 4 C 38 4 42 36 50 36 C 58 36 62 20 80 20 C 98 20 102 6 110 6 C 118 6 122 34 130 34 C 138 34 142 20 160 20 C 178 20 182 8 190 8 C 198 8 202 32 210 32 C 218 32 222 20 240 20"/>
+            </svg>
+          </div>
+          <div class="sub">Fernandes</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- E -->
+    <div class="card">
+      <div class="tag"><span class="name">E — Fluid</span><span class="desc">fuse · arredondado + traço fluido</span></div>
+      <div class="stage">
+        <div class="vE">
+          <div class="word">teto</div>
+          <svg class="swash" viewBox="0 0 340 34" fill="none" stroke="#f2c14e" stroke-width="7" stroke-linecap="round">
+            <path d="M8 20 C 70 -4, 110 30, 170 17 S 280 0, 332 18"/>
+          </svg>
+          <div class="sub">Fernandes e Banda</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- F -->
+    <div class="card">
+      <div class="tag"><span class="name">F — Mark + nome</span><span class="desc">ícone play em badge âmbar + wordmark</span></div>
+      <div class="stage">
+        <div class="vF">
+          <div class="mark">
+            <svg viewBox="0 0 24 24" fill="#0d0d0d"><path d="M6 4.5v15l13-7.5z"/></svg>
+          </div>
+          <div class="txt">teto<br>fernandes<small>banda · pop ao vivo</small></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
