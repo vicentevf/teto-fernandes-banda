@@ -44,6 +44,19 @@ nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeNav));
 /* ---- CURRENT YEAR ------------------------------------------- */
 document.getElementById("year").textContent = new Date().getFullYear();
 
+/* ---- HERO VIDEO: fade in only when ready (no poster flash) --- */
+(function heroVideoReveal() {
+  const video = document.querySelector(".hero-video");
+  if (!video) return;
+  const show = () => video.classList.add("is-playing");
+  if (video.readyState >= 3) show(); // already buffered enough
+  ["loadeddata", "canplay", "playing"].forEach((ev) =>
+    video.addEventListener(ev, show, { once: true })
+  );
+  // safety net: reveal anyway after 5s so it never stays hidden
+  setTimeout(show, 5000);
+})();
+
 /* ---- REVEAL ON SCROLL --------------------------------------- */
 const io = new IntersectionObserver(
   (entries) => {

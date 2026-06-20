@@ -177,7 +177,10 @@ h1, h2, h3 {
   object-position: 50% 30%; /* enquadramento do vídeo vertical na hero */
   filter: grayscale(100%) contrast(1.08) brightness(0.92); /* preto e branco p/ destacar a logo */
   z-index: 0;
+  opacity: 0;                       /* escondido ate o video estar pronto (sem flash de foto) */
+  transition: opacity 0.9s ease;
 }
+.hero-video.is-playing { opacity: 1; }
 .hero-overlay {
   position: absolute; inset: 0;
   background:
