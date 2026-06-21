@@ -169,18 +169,17 @@ h1, h2, h3 {
   text-align: center;
   overflow: hidden;
 }
-.hero-video {
+.hero-img {
   position: absolute; inset: 0;
   display: block;
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: 50% 30%; /* enquadramento do vídeo vertical na hero */
-  filter: grayscale(100%) contrast(1.08) brightness(0.92); /* preto e branco p/ destacar a logo */
+  object-position: 50% 38%; /* enquadramento da foto retrato p/ focar no Teto */
+  filter: grayscale(100%) contrast(1.06) brightness(0.95); /* preto e branco */
   z-index: 0;
-  opacity: 0;                       /* escondido ate o video estar pronto (sem flash de foto) */
-  transition: opacity 0.9s ease;
+  animation: heroImgIn 1.2s ease both;
 }
-.hero-video.is-playing { opacity: 1; }
+@keyframes heroImgIn { from { opacity: 0; } to { opacity: 1; } }
 .hero-overlay {
   position: absolute; inset: 0;
   background:
