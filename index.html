@@ -1,162 +1,268 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Teto Fernandes e Banda</title>
-  <meta name="description" content="Teto Fernandes e Banda — pop ao vivo. Veja a agenda de shows, ouça as músicas e contrate a banda." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teto Fernandes e Banda</title>
+    <meta
+      name="description"
+      content="Teto Fernandes e Banda — pop ao vivo. Veja a agenda de shows, ouça as músicas e contrate a banda." />
 
-  <!-- Open Graph / social preview -->
-  <meta property="og:title" content="Teto Fernandes e Banda" />
-  <meta property="og:description" content="Pop ao vivo. Agenda de shows, músicas e contato." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/img/band4.jpg" />
+    <!-- Open Graph / social preview -->
+    <meta property="og:title" content="Teto Fernandes e Banda" />
+    <meta
+      property="og:description"
+      content="Pop ao vivo. Agenda de shows, músicas e contato." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/sobre3.jpg" />
 
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@700;800&family=Inter:wght@400;500;600&family=Rock+Salt&display=swap" rel="stylesheet" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@700;800&family=Inter:wght@400;500;600&family=Rock+Salt&display=swap"
+      rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ===================== HEADER ===================== -->
+    <header class="site-header" id="header">
+      <div class="container header-inner">
+        <a
+          href="#hero"
+          class="brand"
+          aria-label="Teto Fernandes e Banda — início">
+          <span class="wordmark wordmark--sm"
+            >tf<span class="dot">.</span></span
+          >
+        </a>
 
-  <!-- ===================== HEADER ===================== -->
-  <header class="site-header" id="header">
-    <div class="container header-inner">
-      <a href="#hero" class="brand" aria-label="Teto Fernandes e Banda — início">
-        <span class="wordmark wordmark--sm">tf<span class="dot">.</span></span>
+        <nav class="nav" id="nav" aria-label="Navegação principal">
+          <ul class="nav-list">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#shows">Shows</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#musica">Música</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+          <div class="nav-social">
+            <a
+              href="https://instagram.com/tetofernandes"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram">
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="currentColor">
+                <path
+                  d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.62c-3.15 0-3.5.01-4.74.07-.9.04-1.38.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.33-.28.81-.32 1.71-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.04.9.19 1.38.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.33.13.81.28 1.71.32 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.9-.04 1.38-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.33.28-.81.32-1.71.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.9-.19-1.38-.32-1.71a2.85 2.85 0 0 0-.69-1.06 2.85 2.85 0 0 0-1.06-.69c-.33-.13-.81-.28-1.71-.32-1.24-.06-1.59-.07-4.74-.07Zm0 2.76a5.46 5.46 0 1 1 0 10.92 5.46 5.46 0 0 1 0-10.92Zm0 9a3.54 3.54 0 1 0 0-7.08 3.54 3.54 0 0 0 0 7.08Zm6.95-9.22a1.28 1.28 0 1 1-2.55 0 1.28 1.28 0 0 1 2.55 0Z" />
+              </svg>
+            </a>
+            <a
+              href="https://www.youtube.com/tetofernandes"
+              target="_blank"
+              rel="noopener"
+              aria-label="YouTube">
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="currentColor">
+                <path
+                  d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z" />
+              </svg>
+            </a>
+            <a
+              href="https://open.spotify.com/artist/6eYhTbcZ08PxT9TpKpBpat"
+              target="_blank"
+              rel="noopener"
+              aria-label="Spotify">
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="currentColor">
+                <path
+                  d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm5.5 17.3a.75.75 0 0 1-1.03.25c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 1 1-.33-1.46c4.57-1.04 8.5-.59 11.66 1.34.35.22.46.68.25 1.03Zm1.47-3.27a.94.94 0 0 1-1.29.31c-3.23-1.99-8.16-2.56-11.98-1.4a.94.94 0 1 1-.55-1.8c4.37-1.33 9.8-.69 13.5 1.6.44.27.58.85.32 1.29Zm.13-3.4C15.3 8.34 8.78 8.13 5.07 9.26a1.12 1.12 0 1 1-.65-2.15c4.26-1.29 11.46-1.04 15.99 1.65a1.12 1.12 0 1 1-1.15 1.93Z" />
+              </svg>
+            </a>
+          </div>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <img
+        class="hero-img"
+        src="assets/img/hero-bg.jpg"
+        alt=""
+        aria-hidden="true" />
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1 class="hero-logo">
+          <span class="hero-logo-text"
+            >tetofernandes<span class="dot">.</span></span
+          >
+        </h1>
+        <p class="hero-tagline">Pop ao vivo &mdash; do palco direto pra você</p>
+        <div class="hero-actions">
+          <a href="#shows" class="btn btn-primary">Próximos Shows</a>
+          <a href="#musica" class="btn btn-ghost">Ouça Agora</a>
+        </div>
+      </div>
+      <a href="#shows" class="scroll-cue" aria-label="Rolar para baixo">
+        <span></span>
       </a>
+    </section>
 
-      <nav class="nav" id="nav" aria-label="Navegação principal">
-        <ul class="nav-list">
-          <li><a href="#hero">Início</a></li>
-          <li><a href="#shows">Shows</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#musica">Música</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-        <div class="nav-social">
-          <a href="https://instagram.com/tetofernandes" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.62c-3.15 0-3.5.01-4.74.07-.9.04-1.38.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.33-.28.81-.32 1.71-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.04.9.19 1.38.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.33.13.81.28 1.71.32 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.9-.04 1.38-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.33.28-.81.32-1.71.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.9-.19-1.38-.32-1.71a2.85 2.85 0 0 0-.69-1.06 2.85 2.85 0 0 0-1.06-.69c-.33-.13-.81-.28-1.71-.32-1.24-.06-1.59-.07-4.74-.07Zm0 2.76a5.46 5.46 0 1 1 0 10.92 5.46 5.46 0 0 1 0-10.92Zm0 9a3.54 3.54 0 1 0 0-7.08 3.54 3.54 0 0 0 0 7.08Zm6.95-9.22a1.28 1.28 0 1 1-2.55 0 1.28 1.28 0 0 1 2.55 0Z"/></svg>
-          </a>
-          <a href="https://www.youtube.com/tetofernandes" target="_blank" rel="noopener" aria-label="YouTube">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
-          </a>
-          <a href="https://open.spotify.com/artist/6eYhTbcZ08PxT9TpKpBpat" target="_blank" rel="noopener" aria-label="Spotify">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm5.5 17.3a.75.75 0 0 1-1.03.25c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 1 1-.33-1.46c4.57-1.04 8.5-.59 11.66 1.34.35.22.46.68.25 1.03Zm1.47-3.27a.94.94 0 0 1-1.29.31c-3.23-1.99-8.16-2.56-11.98-1.4a.94.94 0 1 1-.55-1.8c4.37-1.33 9.8-.69 13.5 1.6.44.27.58.85.32 1.29Zm.13-3.4C15.3 8.34 8.78 8.13 5.07 9.26a1.12 1.12 0 1 1-.65-2.15c4.26-1.29 11.46-1.04 15.99 1.65a1.12 1.12 0 1 1-1.15 1.93Z"/></svg>
-          </a>
+    <!-- ===================== SHOWS / AGENDA ===================== -->
+    <section class="section shows" id="shows">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">Agenda</span>
+          <h2>Próximos Shows</h2>
+          <p class="section-sub">
+            Onde a banda vai tocar. Garanta seu ingresso.
+          </p>
+        </header>
+
+        <div class="agenda" id="agenda" aria-live="polite">
+          <p class="agenda-state" id="agendaState">Carregando agenda…</p>
         </div>
-      </nav>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- ===================== HERO ===================== -->
-  <section class="hero" id="hero">
-    <img class="hero-img" src="assets/img/hero-bg.jpg" alt="" aria-hidden="true" />
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <h1 class="hero-logo"><span class="hero-logo-text">tetofernandes<span class="dot">.</span></span></h1>
-      <p class="hero-tagline">Pop ao vivo &mdash; do palco direto pra você</p>
-      <div class="hero-actions">
-        <a href="#shows" class="btn btn-primary">Próximos Shows</a>
-        <a href="#musica" class="btn btn-ghost">Ouça Agora</a>
       </div>
-    </div>
-    <a href="#shows" class="scroll-cue" aria-label="Rolar para baixo">
-      <span></span>
-    </a>
-  </section>
+    </section>
 
-  <!-- ===================== SHOWS / AGENDA ===================== -->
-  <section class="section shows" id="shows">
-    <div class="container">
-      <header class="section-head reveal">
-        <span class="eyebrow">Agenda</span>
-        <h2>Próximos Shows</h2>
-        <p class="section-sub">Onde a banda vai tocar. Garanta seu ingresso.</p>
-      </header>
-
-      <div class="agenda" id="agenda" aria-live="polite">
-        <p class="agenda-state" id="agendaState">Carregando agenda…</p>
+    <!-- ===================== SOBRE ===================== -->
+    <section class="section sobre" id="sobre">
+      <div class="container sobre-grid">
+        <div class="sobre-text reveal">
+          <span class="eyebrow">Sobre</span>
+          <h2>Teto Fernandes</h2>
+          <p class="sobre-lead">
+            Mais de 20 anos levando música, energia e experiências inesquecíveis
+            ao público.
+          </p>
+          <p>
+            Com um repertório versátil que passeia entre rock, pop rock, reggae,
+            MPB e clássicos atemporais, Teto Fernandes entrega performances
+            autênticas, intensas e cheias de conexão.
+          </p>
+          <p class="sobre-lines">
+            Cada apresentação é única.<br />
+            Cada show é uma experiência.<br />
+            Cada música conta uma história.
+          </p>
+          <p class="sobre-tagline">Feel the music. Live the moment.</p>
+        </div>
+        <div class="sobre-photo reveal">
+          <img
+            id="sobrePhoto"
+            src="assets/img/sobre6.jpg"
+            alt="Teto Fernandes e Banda ao vivo"
+            loading="lazy" />
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ===================== SOBRE ===================== -->
-  <section class="section sobre" id="sobre">
-    <div class="container sobre-grid">
-      <div class="sobre-text reveal">
-        <span class="eyebrow">Sobre</span>
-        <h2>Teto Fernandes</h2>
-        <p class="sobre-lead">Mais de 20 anos levando música, energia e experiências inesquecíveis ao público.</p>
-        <p>Com um repertório versátil que passeia entre rock, pop rock, reggae, MPB e clássicos atemporais, Teto Fernandes entrega performances autênticas, intensas e cheias de conexão.</p>
-        <p class="sobre-lines">
-          Cada apresentação é única.<br />
-          Cada show é uma experiência.<br />
-          Cada música conta uma história.
+      <div class="container">
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <!-- ===================== MÚSICA & CONTATO ===================== -->
+    <section class="section musica" id="musica">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">Música</span>
+          <h2>Ouça Agora</h2>
+          <p class="section-sub">Coloque os fones e dá o play.</p>
+        </header>
+        <div class="player reveal">
+          <!-- Substitua pelo link real do Spotify/YouTube da banda -->
+          <iframe
+            title="Player do Spotify"
+            src="https://open.spotify.com/embed/artist/6eYhTbcZ08PxT9TpKpBpat?utm_source=generator&theme=0"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allow="
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              fullscreen;
+              picture-in-picture;
+            "
+            loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTATO / FOOTER ===================== -->
+    <footer class="footer" id="contato">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <span class="wordmark wordmark--md footer-logo"
+            >tetofernandes<span class="dot">.</span></span
+          >
+          <p>Pop ao vivo. Disponível para shows, eventos e festas.</p>
+        </div>
+        <div class="footer-contact">
+          <h3>Contratar / Contato</h3>
+          <p>
+            <a href="mailto:tetoguimba@hotmail.com">tetoguimba@hotmail.com</a>
+          </p>
+          <p>
+            <a href="https://wa.me/5548999240987" target="_blank" rel="noopener"
+              >WhatsApp: (48) 99924-0987</a
+            >
+          </p>
+          <div class="footer-social">
+            <a
+              href="https://instagram.com/tetofernandes"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              >Instagram</a
+            >
+            <a
+              href="https://www.youtube.com/tetofernandes"
+              target="_blank"
+              rel="noopener"
+              aria-label="YouTube"
+              >YouTube</a
+            >
+            <a
+              href="https://open.spotify.com/artist/6eYhTbcZ08PxT9TpKpBpat"
+              target="_blank"
+              rel="noopener"
+              aria-label="Spotify"
+              >Spotify</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; <span id="year"></span> Teto Fernandes e Banda. Todos os
+          direitos reservados.
         </p>
-        <p class="sobre-tagline">Feel the music. Live the moment.</p>
       </div>
-      <div class="sobre-photo reveal">
-        <img id="sobrePhoto" src="assets/img/band1.jpg" alt="Teto Fernandes e Banda ao vivo" loading="lazy" />
-      </div>
-    </div>
+    </footer>
 
-    <div class="container">
-      <div class="gallery" id="gallery"></div>
-    </div>
-  </section>
-
-  <!-- ===================== MÚSICA & CONTATO ===================== -->
-  <section class="section musica" id="musica">
-    <div class="container">
-      <header class="section-head reveal">
-        <span class="eyebrow">Música</span>
-        <h2>Ouça Agora</h2>
-        <p class="section-sub">Coloque os fones e dá o play.</p>
-      </header>
-      <div class="player reveal">
-        <!-- Substitua pelo link real do Spotify/YouTube da banda -->
-        <iframe
-          title="Player do Spotify"
-          src="https://open.spotify.com/embed/artist/6eYhTbcZ08PxT9TpKpBpat?utm_source=generator&theme=0"
-          width="100%" height="352" frameborder="0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== CONTATO / FOOTER ===================== -->
-  <footer class="footer" id="contato">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <span class="wordmark wordmark--md footer-logo">tetofernandes<span class="dot">.</span></span>
-        <p>Pop ao vivo. Disponível para shows, eventos e festas.</p>
-      </div>
-      <div class="footer-contact">
-        <h3>Contratar / Contato</h3>
-        <p><a href="mailto:tetoguimba@hotmail.com">tetoguimba@hotmail.com</a></p>
-        <p><a href="https://wa.me/5548999240987" target="_blank" rel="noopener">WhatsApp: (48) 99924-0987</a></p>
-        <div class="footer-social">
-          <a href="https://instagram.com/tetofernandes" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-          <a href="https://www.youtube.com/tetofernandes" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
-          <a href="https://open.spotify.com/artist/6eYhTbcZ08PxT9TpKpBpat" target="_blank" rel="noopener" aria-label="Spotify">Spotify</a>
-        </div>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>&copy; <span id="year"></span> Teto Fernandes e Banda. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

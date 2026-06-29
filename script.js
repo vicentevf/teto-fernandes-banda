@@ -14,10 +14,12 @@ const AGENDA_URL =
   `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&gid=${SHEET_GID}`;
 
 const GALLERY_IMAGES = [
-  "assets/img/band2.jpg",
-  "assets/img/band3.jpg",
-  "assets/img/band5.jpg",
-  "assets/img/band1.jpg",
+  "assets/img/sobre1.jpg",
+  "assets/img/sobre2.jpg",
+  "assets/img/sobre3.jpg",
+  "assets/img/sobre4.jpg",
+  "assets/img/sobre5.jpg",
+  "assets/img/sobre7.jpg",
 ];
 
 const MONTHS_PT = ["JAN","FEV","MAR","ABR","MAI","JUN","JUL","AGO","SET","OUT","NOV","DEZ"];
