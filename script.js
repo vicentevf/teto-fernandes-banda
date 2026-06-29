@@ -17,7 +17,7 @@ const GALLERY_IMAGES = [
   "assets/img/sobre2.jpg",
   "assets/img/sobre3.jpg",
   "assets/img/sobre4.jpg",
-  "assets/img/sobre5.jpg",
+  "assets/img/sobre6.jpg",
   "assets/img/sobre7.jpg",
 ];
 
