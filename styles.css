@@ -199,7 +199,25 @@ h1, h2, h3 {
   filter: drop-shadow(0 12px 50px rgba(0, 0, 0, 0.55));
   animation: logoIn 1.3s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
 }
-.hero-logo .dot { color: var(--brand-dot); }
+.hero-logo .dot { color: var(--brand-dot); display: inline-block; }
+
+/* Hover energético na logo do hero */
+.hero-logo-text { display: inline-block; cursor: default; transition: filter 0.3s ease; }
+.hero-logo:hover .hero-logo-text {
+  animation: energyPulse 0.8s ease-in-out infinite;
+  filter: drop-shadow(0 0 22px rgba(230, 74, 25, 0.6));
+}
+.hero-logo:hover .dot { animation: dotPulse 0.8s ease-in-out infinite; }
+@keyframes energyPulse {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.04) rotate(-2deg); }
+  50% { transform: scale(1.06) rotate(0deg); }
+  75% { transform: scale(1.04) rotate(2deg); }
+}
+@keyframes dotPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.5) translateY(-2px); }
+}
 @keyframes logoIn {
   from { opacity: 0; transform: translateY(26px) scale(0.97); filter: blur(8px); }
   to   { opacity: 1; transform: none; filter: blur(0); }
