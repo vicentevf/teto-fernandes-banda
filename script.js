@@ -10,8 +10,7 @@
 --------------------------------------------------------------- */
 const SHEET_ID = "1piikAYpzJn1lhP7NgBUsImjXoEWMd0gGyD22SR9suVY";
 const SHEET_GID = "0";
-const AGENDA_URL =
-  `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&gid=${SHEET_GID}`;
+const AGENDA_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&gid=${SHEET_GID}`;
 
 const GALLERY_IMAGES = [
   "assets/img/sobre1.jpg",
@@ -22,7 +21,20 @@ const GALLERY_IMAGES = [
   "assets/img/sobre7.jpg",
 ];
 
-const MONTHS_PT = ["JAN","FEV","MAR","ABR","MAI","JUN","JUL","AGO","SET","OUT","NOV","DEZ"];
+const MONTHS_PT = [
+  "JAN",
+  "FEV",
+  "MAR",
+  "ABR",
+  "MAI",
+  "JUN",
+  "JUL",
+  "AGO",
+  "SET",
+  "OUT",
+  "NOV",
+  "DEZ",
+];
 
 /* ---- HEADER: solid on scroll -------------------------------- */
 const header = document.getElementById("header");
@@ -53,7 +65,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
   const show = () => video.classList.add("is-playing");
   if (video.readyState >= 3) show(); // already buffered enough
   ["loadeddata", "canplay", "playing"].forEach((ev) =>
-    video.addEventListener(ev, show, { once: true })
+    video.addEventListener(ev, show, { once: true }),
   );
   // safety net: reveal anyway after 5s so it never stays hidden
   setTimeout(show, 5000);
@@ -69,7 +81,7 @@ const io = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.15 }
+  { threshold: 0.15 },
 );
 document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
@@ -90,23 +102,37 @@ document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 function parseCSV(text) {
   // Minimal CSV parser that handles quoted fields and commas inside quotes.
   const rows = [];
-  let row = [], field = "", inQuotes = false;
+  let row = [],
+    field = "",
+    inQuotes = false;
   for (let i = 0; i < text.length; i++) {
     const c = text[i];
     if (inQuotes) {
       if (c === '"') {
-        if (text[i + 1] === '"') { field += '"'; i++; }
-        else inQuotes = false;
+        if (text[i + 1] === '"') {
+          field += '"';
+          i++;
+        } else inQuotes = false;
       } else field += c;
     } else {
       if (c === '"') inQuotes = true;
-      else if (c === ",") { row.push(field); field = ""; }
-      else if (c === "\n") { row.push(field); rows.push(row); row = []; field = ""; }
-      else if (c === "\r") { /* ignore */ }
-      else field += c;
+      else if (c === ",") {
+        row.push(field);
+        field = "";
+      } else if (c === "\n") {
+        row.push(field);
+        rows.push(row);
+        row = [];
+        field = "";
+      } else if (c === "\r") {
+        /* ignore */
+      } else field += c;
     }
   }
-  if (field.length || row.length) { row.push(field); rows.push(row); }
+  if (field.length || row.length) {
+    row.push(field);
+    rows.push(row);
+  }
   return rows;
 }
 
@@ -153,8 +179,7 @@ function renderEvents(events) {
     .sort((a, b) => a._d - b._d);
 
   if (!upcoming.length) {
-    wrap.innerHTML =
-      `<p class="agenda-state">Nenhum show agendado no momento. Volte em breve! 🎤</p>`;
+    wrap.innerHTML = `<p class="agenda-state">Agenda no Ar em Breve! 🎤</p>`;
     return;
   }
 
