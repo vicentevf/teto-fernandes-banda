@@ -318,8 +318,8 @@ h1, h2, h3 {
   font-family: "Rock Salt", cursive;
   font-weight: 400;
   color: var(--brand);
-  font-size: 1.15rem;
-  line-height: 1.8;
+  font-size: 1.4rem;
+  line-height: 1.9;
   margin-top: 1.8rem;
 }
 .sobre-photo img {
