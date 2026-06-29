@@ -288,6 +288,21 @@ h1, h2, h3 {
 }
 .sobre-text p { color: var(--muted); margin-top: 1rem; max-width: 52ch; }
 .sobre-text h2 { margin-top: 0.4rem; }
+.sobre-text p.sobre-lead { color: var(--text); font-size: 1.18rem; font-weight: 500; }
+.sobre-text p.sobre-lines {
+  color: var(--text);
+  font-weight: 500;
+  border-left: 3px solid var(--accent);
+  padding-left: 1.1rem;
+  line-height: 1.9;
+}
+.sobre-text p.sobre-tagline {
+  font-family: var(--font-brand);
+  font-weight: 700;
+  color: var(--brand);
+  font-size: 1.25rem;
+  margin-top: 1.4rem;
+}
 .sobre-photo img {
   border-radius: var(--radius);
   width: 100%;
