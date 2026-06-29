@@ -403,3 +403,42 @@ h1, h2, h3 {
   * { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ===================== SILHUETA DA MARCA ===================== */
+/* Sobre: silhueta grande que surge ao rolar (fica sutil ao fundo) */
+.sobre { position: relative; overflow: hidden; }
+.sobre .container { position: relative; z-index: 1; }
+.sobre-silhouette {
+  position: absolute;
+  right: -30px;
+  top: 14%;
+  width: min(340px, 40vw);
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.sobre-silhouette.visible { opacity: 0.1; transform: translateX(0); }
+
+/* Divisor entre seções: silhueta laranja entre dois traços */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  background: var(--bg-2);
+  padding: 1.5rem 0 2.6rem;
+}
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  height: 1px;
+  width: clamp(40px, 12vw, 90px);
+  background: var(--line);
+}
+.section-divider img { width: 46px; height: auto; opacity: 0.95; }
+
+/* Ícone no rodapé */
+.footer-silhouette { display: block; width: 52px; height: auto; opacity: 0.9; margin-bottom: 0.7rem; }
