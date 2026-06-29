@@ -442,3 +442,6 @@ h1, h2, h3 {
 
 /* Ícone no rodapé */
 .footer-silhouette { display: block; width: 52px; height: auto; opacity: 0.9; margin-bottom: 0.7rem; }
+
+/* Silhueta no menu (no lugar do tf.) */
+.brand-silhouette { display: block; height: 46px; width: auto; }
