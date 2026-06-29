@@ -18,7 +18,6 @@ const GALLERY_IMAGES = [
   "assets/img/sobre3.jpg",
   "assets/img/sobre4.jpg",
   "assets/img/sobre6.jpg",
-  "assets/img/sobre7.jpg",
 ];
 
 const MONTHS_PT = [
