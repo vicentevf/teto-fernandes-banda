@@ -445,3 +445,33 @@ h1, h2, h3 {
 
 /* Silhueta no menu (no lugar do tf.) */
 .brand-silhouette { display: block; height: 46px; width: auto; }
+
+/* ===================== AGENDA: destaque + badges ===================== */
+.event--next {
+  border-color: var(--accent);
+  box-shadow: 0 0 26px -8px rgba(230, 74, 25, 0.55);
+}
+.next-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.62rem;
+  color: var(--accent-ink);
+  background: var(--accent);
+  padding: 2px 9px;
+  border-radius: 100px;
+  margin-bottom: 6px;
+}
+.badge-sold {
+  display: inline-block;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+  padding: 0.55rem 1.1rem;
+  border-radius: 100px;
+}

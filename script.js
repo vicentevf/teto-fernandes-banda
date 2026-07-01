@@ -183,22 +183,27 @@ function renderEvents(events) {
   }
 
   wrap.innerHTML = upcoming
-    .map((e) => {
+    .map((e, i) => {
       const day = String(e._d.getDate()).padStart(2, "0");
       const month = MONTHS_PT[e._d.getMonth()];
       const year = e._d.getFullYear();
       const time = e.time ? ` · ${e.time}` : "";
+      const sold = /esgot/i.test(e.tickets);
       const cta = /^https?:\/\//i.test(e.tickets)
         ? `<a class="btn btn-primary" href="${e.tickets}" target="_blank" rel="noopener">Ingressos</a>`
-        : `<span class="soon">Em breve</span>`;
+        : sold
+          ? `<span class="badge-sold">Esgotado</span>`
+          : `<span class="soon">Em breve</span>`;
+      const nextTag = i === 0 ? `<span class="next-tag">Próximo</span>` : "";
       return `
-        <article class="event">
+        <article class="event${i === 0 ? " event--next" : ""}">
           <div class="event-date">
             <div class="event-day">${day}</div>
             <div class="event-month">${month}</div>
             <div class="event-year">${year}</div>
           </div>
           <div class="event-info">
+            ${nextTag}
             <h3>${e.city}</h3>
             <p>${e.venue || ""}${time}</p>
           </div>
