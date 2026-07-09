@@ -477,3 +477,25 @@ h1, h2, h3 {
   padding: 0.55rem 1.1rem;
   border-radius: 100px;
 }
+
+/* ===================== TOQUES MODERNOS ===================== */
+/* Grão sutil sobre o site (ar premium) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.045;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+}
+
+/* Hover mais sofisticado: brilho no botão + sombra nos cards */
+.btn { transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease; }
+.btn-primary:hover { box-shadow: 0 12px 34px -10px rgba(230, 74, 25, 0.6); }
+.event { transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease; }
+.event:hover { box-shadow: 0 16px 44px -20px rgba(0, 0, 0, 0.75); }
+.gallery img { transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease; }
+.gallery img:hover { box-shadow: 0 16px 40px -18px rgba(0, 0, 0, 0.8); }
