@@ -57,17 +57,38 @@ nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeNav));
 /* ---- CURRENT YEAR ------------------------------------------- */
 document.getElementById("year").textContent = new Date().getFullYear();
 
-/* ---- HERO VIDEO: fade in only when ready (no poster flash) --- */
-(function heroVideoReveal() {
-  const video = document.querySelector(".hero-video");
-  if (!video) return;
-  const show = () => video.classList.add("is-playing");
-  if (video.readyState >= 3) show(); // already buffered enough
-  ["loadeddata", "canplay", "playing"].forEach((ev) =>
-    video.addEventListener(ev, show, { once: true }),
+/* ---- HERO PARALLAX: imagem com profundidade + conteúdo flutua/desvanece --- */
+(function heroParallax() {
+  const img = document.querySelector(".hero-img");
+  const content = document.querySelector(".hero-content");
+  const hero = document.getElementById("hero");
+  if (!img || !hero) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  let ticking = false;
+  const update = () => {
+    const y = window.scrollY;
+    const h = hero.offsetHeight || 1;
+    if (y <= h) {
+      img.style.transform = `translate3d(0, ${y * 0.09}px, 0) scale(1.18)`;
+      if (content) {
+        content.style.transform = `translateY(calc(7vh - ${y * 0.12}px))`;
+        content.style.opacity = String(Math.max(0, 1 - y / (h * 0.75)));
+      }
+    }
+    ticking = false;
+  };
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    },
+    { passive: true },
   );
-  // safety net: reveal anyway after 5s so it never stays hidden
-  setTimeout(show, 5000);
+  update();
 })();
 
 /* ---- REVEAL ON SCROLL --------------------------------------- */
