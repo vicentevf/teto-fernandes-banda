@@ -474,7 +474,8 @@ h1, h2, h3 {
 .section-divider img { width: 46px; height: auto; opacity: 0.95; }
 
 /* Ícone no rodapé */
-.footer-silhouette { display: block; width: 52px; height: auto; opacity: 0.9; margin-bottom: 0.7rem; }
+.footer-mark { display: inline-block; text-align: center; }
+.footer-silhouette { display: block; width: 116px; height: auto; opacity: 0.9; margin: 0 auto 0.3rem; }
 
 /* Silhueta no menu (no lugar do tf.) */
 .brand-silhouette { display: block; height: 46px; width: auto; }
