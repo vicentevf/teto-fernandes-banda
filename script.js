@@ -116,6 +116,7 @@ document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
     img.alt = `Teto Fernandes e Banda — foto ${i + 1}`;
     wrap.appendChild(img);
   });
+  io.observe(wrap); // dispara a cascata de entrada da galeria
 })();
 
 /* ---- AGENDA: load + render from Google Sheet ---------------- */

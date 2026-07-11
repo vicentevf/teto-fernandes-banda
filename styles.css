@@ -370,8 +370,14 @@ h1, h2, h3 {
 .footer-bottom p { color: var(--muted); font-size: 0.85rem; text-align: center; }
 
 /* ===================== REVEAL ANIMATION ===================== */
-.reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.visible { opacity: 1; transform: none; }
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(4px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+}
+.reveal.visible { opacity: 1; transform: none; filter: blur(0); }
 
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 860px) {
@@ -403,7 +409,32 @@ h1, h2, h3 {
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
-  .reveal { opacity: 1; transform: none; }
+  .reveal { opacity: 1; transform: none; filter: none; }
+  .gallery img { opacity: 1; transform: none; }
+}
+
+/* ===================== ENTRADA EM CASCATA (galeria) ===================== */
+.gallery img {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.gallery.visible img { opacity: 1; transform: none; }
+.gallery.visible img:nth-child(1) { transition-delay: 0.04s; }
+.gallery.visible img:nth-child(2) { transition-delay: 0.11s; }
+.gallery.visible img:nth-child(3) { transition-delay: 0.18s; }
+.gallery.visible img:nth-child(4) { transition-delay: 0.25s; }
+.gallery.visible img:nth-child(5) { transition-delay: 0.32s; }
+.gallery.visible img:nth-child(6) { transition-delay: 0.39s; }
+.gallery img:hover {
+  transform: scale(1.04);
+  filter: grayscale(0);
+  box-shadow: 0 16px 40px -18px rgba(0, 0, 0, 0.8);
+  transition-delay: 0s;
 }
 
 /* ===================== SILHUETA DA MARCA ===================== */
