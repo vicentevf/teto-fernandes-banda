@@ -347,11 +347,23 @@ h1, h2, h3 {
 .footer { background: var(--bg-2); border-top: 1px solid var(--line); padding-top: 4rem; }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1.5fr 1fr 1.3fr;
+  gap: 2.5rem;
   padding-bottom: 3rem;
-  align-items: center;
+  align-items: start;
 }
+.footer-nav { display: flex; flex-direction: column; gap: 0.65rem; }
+.footer-nav h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+.footer-nav a {
+  color: var(--muted);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.92rem;
+  width: fit-content;
+  transition: color 0.18s ease;
+}
+.footer-nav a:hover { color: var(--accent); }
 .footer-logo { margin-bottom: 1rem; }
 .footer-brand p { color: var(--muted); max-width: 36ch; }
 .footer-contact h3 { font-size: 1.2rem; margin-bottom: 1rem; }
