@@ -177,7 +177,7 @@ h1, h2, h3 {
   object-position: 50% 53%; /* enquadramento da foto retrato (sobe um pouco) */
   filter: grayscale(100%) contrast(1.06) brightness(0.95); /* preto e branco */
   z-index: 0;
-  transform: scale(1.18); /* overscan p/ o parallax não abrir bordas */
+  transform: scale(1.22); /* overscan p/ o parallax não abrir bordas */
   will-change: transform;
   animation: heroImgIn 1.2s ease both;
 }
@@ -494,6 +494,40 @@ h1, h2, h3 {
 }
 .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .videos-cta { text-align: center; margin-top: 2rem; }
+
+/* ===================== BOTÃO FLUTUANTE WHATSAPP ===================== */
+.wa-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #25d366;
+  color: #fff;
+  padding: 0.7rem 1.1rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.2s ease;
+}
+.wa-float.show { opacity: 1; transform: none; pointer-events: auto; }
+.wa-float:hover { box-shadow: 0 16px 42px -10px rgba(37, 211, 102, 0.65); transform: translateY(-2px); }
+.wa-ico { width: 22px; height: 22px; flex: none; }
+@media (max-width: 560px) {
+  .wa-label { display: none; }
+  .wa-float { padding: 0.85rem; }
+  .wa-ico { width: 24px; height: 24px; }
+}
 
 /* ===================== AGENDA: destaque + badges ===================== */
 .event--next {

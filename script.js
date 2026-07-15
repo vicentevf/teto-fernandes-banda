@@ -57,6 +57,15 @@ nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeNav));
 /* ---- CURRENT YEAR ------------------------------------------- */
 document.getElementById("year").textContent = new Date().getFullYear();
 
+/* ---- BOTÃO FLUTUANTE WHATSAPP: aparece ao rolar --- */
+(function waFloat() {
+  const wa = document.querySelector(".wa-float");
+  if (!wa) return;
+  const onScrollWa = () => wa.classList.toggle("show", window.scrollY > 320);
+  onScrollWa();
+  window.addEventListener("scroll", onScrollWa, { passive: true });
+})();
+
 /* ---- HERO PARALLAX: imagem com profundidade + conteúdo flutua/desvanece --- */
 (function heroParallax() {
   const img = document.querySelector(".hero-img");
@@ -70,10 +79,11 @@ document.getElementById("year").textContent = new Date().getFullYear();
     const y = window.scrollY;
     const h = hero.offsetHeight || 1;
     if (y <= h) {
-      img.style.transform = `translate3d(0, ${y * 0.09}px, 0) scale(1.18)`;
+      const p = Math.min(y / h, 1);
+      img.style.transform = `translate3d(0, ${y * 0.1}px, 0) scale(${1.22 + p * 0.08})`;
       if (content) {
-        content.style.transform = `translateY(calc(7vh - ${y * 0.12}px))`;
-        content.style.opacity = String(Math.max(0, 1 - y / (h * 0.75)));
+        content.style.transform = `translateY(calc(7vh - ${y * 0.16}px))`;
+        content.style.opacity = String(Math.max(0, 1 - y / (h * 0.7)));
       }
     }
     ticking = false;
